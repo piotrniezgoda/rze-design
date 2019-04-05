@@ -1,0 +1,154 @@
+.home-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.homeHeader {
+  flex: 2 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.homeHeader__bg-content {
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('../images/city-bg.svg');
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  width: 100%;
+}
+
+.homeHeader__logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3rem 1rem;
+  background: $darkBlue;
+  width: 100%;
+}
+
+.logo-box__logo {
+  width: 9rem;
+}
+
+.homeMain {
+  flex: 1 1;
+  padding: 0.5rem 1rem 71px 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  background: transparent;
+}
+
+.homeMain__moreinfo {
+  font-family: 'Francois One', sans-serif;
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.menu__item {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.menu__link {
+  border: 1px solid #000;
+  padding: 0.81rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s;
+  color: #000;
+
+  &:hover, &:focus {
+    color: #fff;
+  }
+
+  &::before {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #1275ba;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s;
+  }
+
+  &:hover:after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+
+  &:focus:after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+}
+
+.particles-js {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+
+  @media(max-width:650px) {
+    background: url('../images/polygons.png');
+    background-position: 0 0;
+    background-size: cover;
+
+  }
+}
+
+@media (min-width: 860px) {
+  .logo-box__logo {
+    width: 12.5rem;
+  }
+}
