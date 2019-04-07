@@ -8,6 +8,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   entry: {
     main: './src/assets/js/index.js',
+    particles: './src/assets/js/load-particles.js',
+    accordion: './src/assets/js/accordion.js',
   },
   mode: 'development',
   output: {
@@ -95,16 +97,13 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
+      // {
+      //   test: /\.m?js$/,
+      //   exclude: /(node_modules|bower_components)/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //   },
+      // },
       {
         test: /\.json$/,
         use: [

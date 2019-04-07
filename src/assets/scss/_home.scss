@@ -1,4 +1,4 @@
-.home-container {
+.site-container {
   min-height: 100vh;
   position: relative;
   display: flex;
@@ -6,7 +6,7 @@
   overflow-x: hidden;
 }
 
-.homeHeader {
+.siteHeader {
   flex: 2 1;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   overflow: hidden;
   position: relative;
 }
-.homeHeader__bg-content {
+.siteHeader__bg-content {
   overflow: hidden;
   padding: 0.5rem 1rem;
   flex: 5;
@@ -52,6 +52,7 @@
   box-sizing: border-box;
   position: relative;
   background: transparent;
+  overflow: hidden;
 }
 
 .homeMain__moreinfo {
@@ -87,17 +88,20 @@
   position: relative;
   transition: all 0.3s;
   color: #000;
+  z-index: 2;
+  width: 100%;
 
   &:hover, &:focus {
     color: #fff;
   }
+
 
   &::before {
     height: 100%;
     left: 0;
     top: 0;
     width: 100%;
-    background: #1275ba;
+    background: #3d5d73;
     content: '';
     position: absolute;
     z-index: -1;

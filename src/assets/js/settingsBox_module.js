@@ -1,5 +1,6 @@
 export default () => {
 
+
   const boxConfig = {
     boxHandler: document.querySelector('#settingsBoxHandler'),
     settingsBox: document.querySelector('#settingsBox'),
