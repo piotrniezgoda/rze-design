@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-$('.accordion__article-title').click(function(e) {
-  e.preventDefault();
+$('.accordion__article-title').click(toggleAccordion);
 
+function toggleAccordion() {
   var $this = $(this);
 
   if ($this.next().hasClass('show')) {
@@ -13,4 +13,10 @@ $('.accordion__article-title').click(function(e) {
       $this.next().toggleClass('show');
       $this.next().slideToggle(350);
   }
-});
+}
+
+if (window.matchMedia('(min-width: 600px)').matches) {
+  $('.accordion__article-title').off('click', toggleAccordion);
+  $('.accordion__inner').addClass('show--wideScr');
+  $('.accordion__toggle').attr('disabled', 'true');
+}

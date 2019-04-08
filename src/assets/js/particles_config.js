@@ -28,7 +28,7 @@ export const config = {
       },
     },
     'opacity': {
-      'value': 0.02,
+      'value': 0.05,
       'random': true,
       'anim': {
         'enable': false,

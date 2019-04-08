@@ -8,6 +8,3 @@ require('../scss/style.scss');
 
 
 settingsBox();
-
-
-// eslint-disable-next-line no-undef
