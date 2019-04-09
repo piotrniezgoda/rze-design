@@ -83,12 +83,12 @@
 
 .p-group {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem auto;
 }
 
 @media (min-width: 700px) {
   .p-group {
-    max-width: 900px;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
