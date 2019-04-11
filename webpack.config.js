@@ -97,13 +97,13 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.m?js$/,
-      //   exclude: /(node_modules|bower_components)/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //   },
-      // },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.json$/,
         use: [
@@ -114,10 +114,6 @@ module.exports = {
             },
           },
         ],
-      },
-      {
-        test: /\particles\.js/,
-        use: 'exports-loader?particlesJS=window.particlesJS,pJSDom=window.pJSDom',
       },
     ],
   },

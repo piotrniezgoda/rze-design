@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "core-js": "^2.6.5",
     "particles.js": "^2.0.0"
   },
   "devDependencies": {
