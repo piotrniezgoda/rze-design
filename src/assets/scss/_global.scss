@@ -24,3 +24,70 @@ body, html {
   width: 11rem;
 }
 
+.siteHeader__nav {
+  padding: 5rem 0 2rem 0;
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.siteheader__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteheader__menulink {
+  color: #fff;
+  text-decoration: none;
+  z-index: 999;
+  position: relative;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Francois One', sans-serif;
+  box-sizing: border-box;
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #fff;
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+  }
+
+  &:hover {
+    color: #000;
+  }
+
+  &:focus {
+    border: 2px solid #fff;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.siteheader__menulink--active {
+  color: #000;
+
+  &::before {
+    width: 100%;
+  }
+}
+
+.siteheader__menuitem {
+  margin-right: 2rem;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+
+

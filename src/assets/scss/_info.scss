@@ -2,7 +2,11 @@
   background: linear-gradient(rgba(58, 96, 115, 0.84), rgba(0, 4, 40,0.84)), url('../images/rzedesign-page-bg-mobile.jpg');
   background-size: cover;
   background-position: center;
-  padding: 7rem 0 15rem 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem 0;
 }
 
 .bg-info {
@@ -73,12 +77,6 @@
   top: unset;
   left: unset;
   right: unset;
-}
-
-.infopage__nav {
-  max-width: 10rem;
-  margin: 0 auto;
-  padding: 2rem 0 4rem;
 }
 
 .p-group {
