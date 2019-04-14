@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^2.6.5",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "lazyload": "^2.0.0-rc.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
