@@ -4,12 +4,14 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
     main: './src/assets/js/index.js',
     particles: './src/assets/js/load-particles.js',
     accordion: './src/assets/js/accordion.js',
+    gallery: './src/assets/js/galleryInit.js',
   },
   mode: 'development',
   output: {
@@ -42,6 +44,10 @@ module.exports = {
       filename: 'assets/css/style.css',
       chunkFilename: 'assets/css/[id].css',
     }),
+    new CopyPlugin([
+      { from: 'src/assets/images/galeria/', to: 'assets/images/galeria/' },
+      { from: 'src/assets/images/prace/', to: 'assets/images/prace/' },
+    ]),
   ],
   module: {
     rules: [

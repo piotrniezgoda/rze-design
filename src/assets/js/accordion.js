@@ -1,4 +1,7 @@
 /* eslint-disable no-undef */
+import * as $ from 'jquery';
+
+
 $('.accordion__article-title').click(toggleAccordion);
 
 function toggleAccordion() {
