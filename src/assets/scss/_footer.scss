@@ -1,6 +1,6 @@
 .footer {
   background: transparent;
-  height: 71px;
+  min-height: 71px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -9,4 +9,12 @@
   justify-content: center;
   align-items: center;
   border-top: 1px solid $grey;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.footer__copyright {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #585858;
 }

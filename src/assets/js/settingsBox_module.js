@@ -57,8 +57,21 @@ export default () => {
       boxConfig.startFontLevelSize = 0;
     }
     boxConfig.startFontLevelSize += 1;
+    sessionStorage.setItem('fontLevel', boxConfig.startFontLevelSize);
     const actualfontLevel = boxConfig.startFontLevelSize;
     changeFontSize(actualfontLevel);
     updateFontInfo(actualfontLevel);
   });
+
+  function levelFromStorage() {
+    if (sessionStorage.getItem('fontLevel') !== null) {
+      const storageFontLevel = sessionStorage.getItem('fontLevel');
+      const actualfontLevel = parseInt(storageFontLevel, 10);
+      boxConfig.startFontLevelSize = actualfontLevel;
+      changeFontSize(actualfontLevel);
+      updateFontInfo(actualfontLevel);
+    }
+  }
+
+  levelFromStorage();
 };

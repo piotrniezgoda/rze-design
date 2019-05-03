@@ -11,8 +11,6 @@ require('../../informacje.html');
 require('../../prace.html');
 require('../scss/style.scss');
 
-
-
 settingsBox();
 
 new WOW().init();

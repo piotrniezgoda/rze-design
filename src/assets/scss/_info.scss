@@ -1,5 +1,5 @@
 .header-info {
-  background: linear-gradient(rgba(58, 96, 115, 0.84), rgba(0, 4, 40,0.84)), url('../images/rzedesign-page-bg-mobile.jpg');
+  background: linear-gradient(rgba(20, 30, 48, 0.98), rgba(36, 59, 85,0.95)), url('../images/rzedesign-page-bg-mobile.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -8,8 +8,21 @@
   align-items: center;
   padding: 4rem 0;
   min-height: 40rem;
+
+  @media(min-width: 1000px) {
+    background: linear-gradient(rgba(20, 30, 48, 0.98), rgba(36, 59, 85,0.95)), url('../images/rzedesign-page-bg-fhd.jpg');
+    background-position: center;
+  }
 }
 
+.header-info--works {
+  background: linear-gradient(rgba(15, 32, 39, 0.98), rgba(32, 58, 67,0.95), rgba(36,36,62, 0.95)), url('../images/rzedesign-pageworks-bg-mobile.jpg');
+  background-position: center;
+  @media(min-width: 1000px) {
+    background: linear-gradient(rgba(15, 32, 39, 0.98), rgba(32, 58, 67,0.95), rgba(36,36,62, 0.95)), url('../images/rzedesign-pageworks-bg-fhd.jpg');
+    background-position: center;
+  }
+}
 .bg-info {
   background: none;
   overflow: unset;
