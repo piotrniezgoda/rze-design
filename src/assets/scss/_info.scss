@@ -136,6 +136,100 @@
   }
 }
 
+.jumbotron {
+  position: relative;
+  height: 400px;
+  display: flex;
+  margin: 4rem 0;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    height: 800px;
+    overflow: hidden;
+  }
+
+  &:hover .jumbotron__image {
+    transform: scale(1.12);
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &:hover .jumbotron__innercontent {
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.35);
+  }
+
+
+
+  &__image {
+    flex: 1 1 50%;
+    height: 100%;
+    background: url("../images/teatr.jpg");
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 0.4s;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #000;
+      opacity: 0.4;
+      transition: 0.4s;
+    }
+
+  }
+
+  &__yell {
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.jumbotron__innercontent {
+  color: #cad4da;
+  padding: 1rem;
+  flex: 1 1 50%;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  background: #0c202d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron__link-button {
+  margin: 1rem 0;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px solid #fff;
+  padding: 1.4rem 1rem;
+
+  &:hover, &:focus {
+    background: #fff;
+    color: #000;
+  }
+}
+
 
 .article-section-article_title {
   color: $blue;
