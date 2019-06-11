@@ -70,12 +70,8 @@ body, html {
 }
 
 .siteheader__menulink--active {
-  color: #dcb900;
+  color: #607D8B;
 
-  &::before {
-    width: 100%;
-    background: #dcb900;
-  }
 }
 
 .siteheader__menuitem {
