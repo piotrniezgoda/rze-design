@@ -47,6 +47,7 @@ module.exports = {
     new CopyPlugin([
       { from: 'src/assets/images/galeria/', to: 'assets/images/galeria/' },
       { from: 'src/assets/images/prace/', to: 'assets/images/prace/' },
+      { from: 'src/assets/images/favicons/', to: 'assets/images/favicons/' },
     ]),
   ],
   module: {
